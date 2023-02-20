@@ -1,0 +1,123 @@
+// import global rules page
+@use "./pages/global-rules";
+
+// import mixins
+@use "./helpers/mixins" as *;
+
+// import placeholders
+@use "./helpers/placeholders";
+
+// import variables
+@use "./helpers/variables" as *;
+
+// medias of every screen
+$medias: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .container {
+    @include breakPoint(mobile);
+  }
+  .navbar__bars {
+    display: block;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+  .container {
+    @include breakPoint(small);
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+  .container {
+    @include breakPoint(medium);
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1999px) {
+  .container {
+    @include breakPoint(large);
+  }
+}
+
+// larger than X-Large
+@media (min-width: 1200px) {
+  .container {
+    @include breakPoint(x-large);
+  }
+}
+
+// container background
+.container {
+  background-color: #fff;
+  width: 90%;
+  padding: 5%;
+  border-radius: 10px;
+}
+
+///////// Start NAVBAR ///////////
+.navbar {
+  display: flex;
+  margin-bottom: 10%;
+  .navbar__logo {
+    @extend %text-decoration;
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+  }
+  .navbar__bars {
+    @extend %hidden;
+  }
+  .navbar__menu {
+    padding: 20px;
+    text-align: center;
+    a {
+      @extend %text-decoration;
+      color: black;
+      padding: 10px;
+    }
+  }
+  
+}
+
+
+
+/////End NAVBAR//////////
+
+///
+///
+///
+
+// start hero//////
+.hero {
+  display: flex;
+}
+
+.hero__container--left {
+  h1 {
+    color: $green;
+    border-color: green;
+  }
+  h1,
+  h2 {
+    font-size: 50px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20%;
+  }
+}
+
+////end hero //////

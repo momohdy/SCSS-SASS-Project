@@ -1,0 +1,20 @@
+// mixins of  @media  handling
+
+@mixin breakPoint($point) {
+  @if $point == mobile {
+    width: 540px;
+    margin: 20px;
+  } @else if $point == small {
+    width: 720px;
+    margin: 30px;
+  } @else if $point == medium {
+    width: 960px;
+    margin: 40px;
+  } @else if $point == large {
+    width: 1140px;
+    margin: 50px;
+  } @else {
+    width: 1320px;
+    margin: 60px;
+  }
+}

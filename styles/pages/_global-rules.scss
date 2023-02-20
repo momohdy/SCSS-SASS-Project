@@ -1,0 +1,30 @@
+// import variables
+@use '../helpers/variables' as * ;
+@use '../helpers/placeholders' as * ;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: bold;
+
+}
+
+body{
+    background-color: $green;
+}
+
+#button {
+    @extend %button;
+}
+
+
+// grid system 
+$grid_cols : 12 ;
+
+@for $i  from 1 through $grid_cols {
+    .col-#{$i} {
+        width:  percentage( $i / $grid_cols );
+    }
+}
+ 
+

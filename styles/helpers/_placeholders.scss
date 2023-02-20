@@ -1,0 +1,18 @@
+@use '../helpers/variables' as * ;
+
+%hidden {
+    display: none;
+}
+
+%text-decoration {
+    text-decoration: none;
+}
+
+%button {
+    @extend %text-decoration;
+    background-color: $green;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+    border-color: green;
+}
